@@ -1,0 +1,17 @@
+# Evaluation D25 site thehive-project.org
+## Audit SEO et réseau dégradé
+Les données structurées sont valides et garantissent que la page est optimisée pour le classement des résultats 
+des moteurs de recherche. N'utilise pas HTPPS et n'utilise pas HTTP/2 pour toutes ses ressources.
+## Faille a) Brute Force
+### exploitation
+Des liens vers les destinations d'origine croisée qui sont dangereux.
+### sécurisation
+Inclut des bibliothèques JavaScript frontales avec 6 vulnérabilités de sécurité détectées. Permet aux utilisateurs de coller dans les champs de mot de passe.
+## Faille b) Command Injection
+N'enregistre pas de service worker pour contrôler la page et le start_url
+## Faille c) File Inclusion
+Peut avoir une faille si l’utilisateur peut contrôler quel fichier inclure.
+## Faille d) SQL Injection, SQL Injection (Blind)
+Apparemment l'utilisateur n'est pas en mesure de modifier le comportement initial d’une requête.
+## Faille f) XSS (Reflected), XSS (Stored)
+Les liens vers les destinations d'origine croisée sont dangereux(Bootstrap@3.3.7 et jQuery@1.12.4)
